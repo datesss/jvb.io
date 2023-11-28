@@ -220,18 +220,7 @@
    "Other Notes": ""
  },
  {
-   "Tea": "Predawn Dark",
-   "Type": "Ripe",
-   "Location": "",
-   "Year": "2023",
-   "Description": "Molasses and amped up aromatics of dark fruits and forest floor. Charcoal Roasted.",
-   "Amount": "",
-   "Seller": "w2t",
-   "Link": "https://white2tea.com/products/2023-predawn-dark?_pos=2&_sid=1fac75c60&_ss=r",
-   "Other Notes": ""
- },
- {
-   "Tea": "Turlte Dove",
+   "Tea": "Turtle Dove",
    "Type": "White",
    "Location": "Yunnan",
    "Year": "2017",
@@ -295,5 +284,16 @@
    "Seller": "",
    "Link": "",
    "Other Notes": ""
- }
+ },
+ {
+  "Tea": "Tianjian Fuzhuan",
+  "Type": "Other",
+  "Location": "Anhua, Hunan",
+  "Year": "2022",
+  "Description": "Thick, rich and powerful heicha.",
+  "Amount": "",
+  "Seller": "w2t",
+  "Link": "https://white2tea.com/products/2023-tianjian-fuzhuan",
+  "Other Notes": ""
+}
 ]
