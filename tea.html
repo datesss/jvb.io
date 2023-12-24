@@ -12,6 +12,14 @@
 
     .tea {padding-left: 20px; }
     .teaName {font-size: 20px;}
+    .archive {
+      display: block;
+      text-align: right;
+      color: #d5d5d5;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 10px;
+    }
     .description {padding-left: 10px; font-size: 14px; }
     p {display: inline-block}
     h1 {padding-top: 50px;}
@@ -32,9 +40,11 @@
     const TeaMenu = ({ teas }) => {
       const orderedTypes = ['White', 'Oolong', 'Ripe', 'Raw', 'Red', 'Other'];
 
+      const filteredTeas = teas.filter(tea => tea.Amount !== undefined && tea.Amount !== 0);
+
               // Group teas by type
       const groupedTeas = orderedTypes.reduce((groups, type) => {
-        const teasOfType = teas.filter(tea => tea.Type === type);
+        const teasOfType = filteredTeas.filter(tea => tea.Type === type);
         if (teasOfType.length) {
           groups[type] = teasOfType;
         }
@@ -54,7 +64,7 @@
                     <span style={{ fontStyle: 'italic', marginLeft: '5px' }}>{tea.Location ? `${tea.Location}, ` : ''}{tea.Year ? `${tea.Year}.` : ''}</span>
                   </p>
                   <p className='description' style={{ margin: '5px 0 10px 0' }}>{tea.Description}
-                    {tea.Seller && tea.Description && (
+                    {tea.Seller && tea.Link && (
                       <span style={{fontSize: '12px'}}> <a href={tea.Link} target="_blank" rel="noopener noreferrer">{tea.Seller}</a>
                       </span>
                     )}
@@ -83,6 +93,7 @@
           <h1>Ballerina's Salon de Thé</h1>
           <h3>Winter 2023 Menu</h3>
           <TeaMenu teas={teaData} />
+          <a class='archive' href='/teas-archive.html'>archive</a>
         </div>
       );
     };
