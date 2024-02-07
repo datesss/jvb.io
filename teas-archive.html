@@ -132,7 +132,7 @@
               return tea;
             });
             console.log(teaList)
-            const teaListFiltered = teaList.filter(tea.Amount == undefined || tea.Amount === 0);
+            const teaListFiltered = teaList.filter(tea => tea.Amount === undefined || tea.Amount === 0);
             console.log(teaListFiltered)
             setTeaData(teaListFiltered);
           })
@@ -146,7 +146,7 @@
           <h1>Ballerina's Salon de Thé</h1>
           <h3>Winter 2023 Menu</h3>
           <TeaMenu teas={teaData} />
-          <a class='archive' href='/teas-archive.html'>archive</a>
+          <a class='archive' href='/tea.html'>home</a>
         </div>
       );
     };
