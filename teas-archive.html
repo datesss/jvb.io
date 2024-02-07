@@ -132,7 +132,7 @@
               return tea;
             });
             console.log(teaList)
-            const teaListFiltered = teaList.filter(tea => tea.Amount === undefined || tea.Amount === 0);
+            const teaListFiltered = teaList.filter(tea => tea.Amount === undefined || tea.Amount === 0 || tea.Amount === "0");
             console.log(teaListFiltered)
             setTeaData(teaListFiltered);
           })
