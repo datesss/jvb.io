@@ -112,7 +112,7 @@
         // Fetching data from Google Sheets CSV file
         const headers = new Headers();
         headers.append('X-Requested-With', 'XMLHttpRequest');
-        fetch('https://cors-anywhere.herokuapp.com/http://docs.google.com/spreadsheets/d/e/2PACX-1vTiIho0ymnn0HjdPuu1ImqbeGaDc3TTFgkpLSl7EIs5dyymphCBr1aQq3zglABERNgcXg9Zq7m6cT7u/pub?gid=0&single=true&output=tsv', {
+        fetch('https://teaproxy.jvb.io/', {
           method: 'GET',
           headers: headers,
           mode: 'cors',
