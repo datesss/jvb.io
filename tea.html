@@ -118,8 +118,10 @@
           mode: 'cors',
           cache: 'default'
         })
-          .then(response => response.body.text())
-          .then(data => {
+          .then(response => response.json())
+          .then(response => {
+            const data = response.body;
+            
             // Process the TSV data
             const rows = data.split('\n');
             const headers = rows[0].split('\t'); // Split using '\t' for TSV
