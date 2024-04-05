@@ -111,7 +111,6 @@
       React.useEffect(() => {
         // Fetching data from Google Sheets CSV file
         const headers = new Headers();
-        headers.append('X-Requested-With', 'XMLHttpRequest');
         fetch('https://api.jvb.io/', {
           method: 'GET',
           headers: headers,
