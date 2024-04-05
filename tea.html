@@ -121,7 +121,7 @@
           .then(response => response.text())
           .then(data => {
             // Process the TSV data
-            const rows = data.split('\n');
+            const rows = data.body.split('\n');
             const headers = rows[0].split('\t'); // Split using '\t' for TSV
             const teaList = rows.slice(1).map(row => {
               const values = row.split('\t'); // Split using '\t' for TSV
